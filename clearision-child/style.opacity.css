@@ -1,15 +1,7 @@
-/*
-Theme Name: Clearision Child
-Theme URI: http://blog.dimpurr.com/Clearison
-Version: 2.6.1
-Author: Dimpurr
-Author URI: http://dimpurr.com
-Description: A HTML5 grey and one column WordPress theme.
-Text Domain: clearision
-Template: clearision
-*/
 @import url(../clearision/style.opacity.css);  
-#ctn,#link { background: #FFF; margin: -16px 20px 0 200px; box-shadow:0 0 20px rgba(55, 174, 253, 0.88); }
+
+#ctn,#link { background: rgba(0, 0, 0, 0.3); margin: *-16px 20px 0 200px;box-shadow:0 0 20px rgba(55, 174, 253, 0.88);}
 pre , code { background: rgba(231, 239, 255, 0.42); color: #FEFEFE; border: 1.5px solid #AAA; }
 #logo { background: rgba(255, 255, 255, 0.6); box-shadow:0 0 0 5px rgba(170, 210, 241, 0.4); border-width: 0; }
 #title_r input , #title_r button { margin: 0 0 1px 16px; background-color: rgba(255, 255, 255, 0.8); box-shadow: 0 0 3px 3px rgba(192, 223, 248, 0.4); }
+#nav , #next { border-color: rgba(27, 164, 255, 0.69); }

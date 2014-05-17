@@ -7,7 +7,7 @@
 
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 <?php if (get_option('clrs_opct') == "no") { ?>
-	<link rel="stylesheet" href="<?=get_template_directory_uri(); ?>/style.opacity.css">
+	<link rel="stylesheet" href="<?=get_template_directory_uri(); ?>/../clearision-child/style.opacity.css">
 	<?php $bg = get_option('clrs_opbg'); if ( !empty( $bg ) ) { ?>
 	<style>body { background-image: url("<?=$bg;?>"); };</style>
 <?php }; }; ?>
@@ -30,9 +30,18 @@
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
 <![endif]-->
 
-<?php if ( is_user_logged_in() ) { // 适配 WordPress 顶部管理栏
+<?php
+
+if ( is_user_logged_in() ) { // 适配 WordPress 顶部管理栏
 	echo '<style type="text/css" media="screen"> #float { top: 32px; } </style>' ;
-} ?>
+}
+
+$clrs_style = get_option("clrs_style");
+if ( !empty($clrs_style) ) {
+	echo "<style>" . $clrs_style . "</style>";
+}
+
+?>
 
 <?php wp_head(); ?>
 
@@ -66,25 +75,9 @@
 	<?php wp_nav_menu( array( 'theme_location' => 'main' ) ); ?>
 </nav>
 
-<nav id="next" role="second_navigation">
+<nav id="next" role="sencond_navigation">
 	<?php wp_nav_menu( array( 'theme_location' => 'next' ) ); ?>
 </nav>
-
-<tag>
-<?php if (function_exists("insert_audio_player")) {insert_audio_player("[audio:http://blon-wordpress.stor.sinaapp.com/drop.mp3,
-http://blon-wordpress.stor.sinaapp.com/bitter.mp3,
-http://blon-wordpress.stor.sinaapp.com/tokyoeki-lin.mp3,
-http://blon-wordpress.stor.sinaapp.com/fade.mp3,
-http://blon-wordpress.stor.sinaapp.com/fix.mp3,
-http://blon-wordpress.stor.sinaapp.com/grief.mp3,
-http://blon-wordpress.stor.sinaapp.com/raise.mp3,
-http://blon-wordpress.stor.sinaapp.com/wipe.mp3,
-http://blon-wordpress.stor.sinaapp.com/wound.mp3|loop=yes]");} ?>
-</tag>
-
-
-
-
 
 </div>
 <?                          //ip获取代码
