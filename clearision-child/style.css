@@ -17,17 +17,51 @@ pre,code { margin: 15px 0; padding: 10px; display: block;
 #logo { width: 112px; background: #FFF; margin-bottom: 26px;
 	border-style: solid; border-width: 1px; border-color: #DDD; 0 0 0 5px rgba(170, 210, 241, 0.4);}
 #ctn,#link { background: rgba(0, 173, 255, 0.14); margin: -16px 20px 0 200px; box-shadow:0 0 20px rgba(55, 174, 253, 0.88); }
-.post_time { display: inline-block; float: right; padding: 5px; margin-left: 15px;
-	text-align: center; font-family:   "Consolas","Times New Roman", serif, sans-serif;
-	border-width: 0 1px 1px 1px; border-style: solid; border-color: #DDD; }
+/*文章发布时间样式修改 Modification of the post time block behind the article*/
+.post_time { display: block; color: black; float: right; padding: 10px; margin: 10px;text-align: center; font-family:   "Consolas","Times New Roman", serif, sans-serif;border-width: 0;  background-color: rgba(255, 255, 255, 0.76);}
 
-/*hr样式修改*/
+
+/*hr样式修改 Making my own "hr" style*/
 .hrs{ height:2px;border:none;border-top:2px solid;width: 90%;}
 .hrblue{ height:4px;border:none;border-top:4px solid rgba(0, 144, 255, 1);}
 
-/*文章边框实心化*/
+/*文章边框实心化 Turning the border of article into solid*/
 .post { border-top: 1px solid #DDD; }
 .post_h_l { padding: 10px 0; border-bottom: 1px solid #DDD; }
-/*移动端出现排版混乱，暂将width由140改为1400，注释掉float*/
+/*移动端出现排版混乱，暂将width由140改为1400，注释掉float ; Stop using "width" to fix the mobile's style*/
 #nav , #next { margin:0 ;padding: 0px; width: *140px; float: *right;
 	 border-style: solid; border-color: #DDD; border-width: 0px 2px 0 0; }
+/*收藏夹页面样式 Bookmark page's modification*/
+ul#fav>li {
+    margin: 50px;
+    border: 1px solid black;
+    font-size: 1.5em;
+    padding: 10px;
+    background-color: rgba(235, 235, 235, 0.76);
+    color: black;
+    width: 80%;
+}
+ul#fav>li>a {
+    color: black;
+    text-decoration: none;
+    border-bottom: 0px;
+    display: block;
+}
+ul#fav {
+    list-style-type: none;
+}
+
+/*文章区块 Make a block for articles*/
+div#content article {
+    background-color: rgba(0, 0, 0, 0.48);
+    margin-bottom: 40px;
+    padding: 10px;
+    box-shadow: 0px 0px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+/*主页样式修改*/
+#content , #link_content { margin: 0px; padding: 20px 15px; }
+
+/*导航栏按钮修改*/
+#nav li:hover , #next li:hover { border-color: #1DA5FF;}
+#nav a , #next a {color: #1DA5FF; }
