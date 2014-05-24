@@ -1,4 +1,4 @@
 uinz.biz
 ========
 
-My blog's source code
+My blog's theme's source code
