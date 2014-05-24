@@ -85,7 +85,6 @@ date_default_timezone_set("PRC");
 
 $ipfile = "wp-content/ip.txt";//保存的文件名
 $lastvisiter = "wp-content/lv.txt";//最后访问来源
-$test = "wp-content/test.txt";
 $ip = $_SERVER['REMOTE_ADDR'];
 $src = $_SERVER['HTTP_USER_AGENT'];
 $date = date('Y-m-d H:i:s');
@@ -95,9 +94,6 @@ if (strpos($text, "bot")==false && strpos($text,"spider")==false)//爬虫过滤
 		$handle = fopen($ipfile, 'a+');
 		$handle2 = fopen($lastvisiter,'r');
 		$tmp = file_get_contents("$lastvisiter");
-		$handlex = fopen($test,'w+');
-		fwrite($handlex, "$tmp"."\n"."$src");
-		fclose($handlex);
 		if($src!=$tmp)//相同访问者过滤
 			{
 				fwrite($handle,"$text");
