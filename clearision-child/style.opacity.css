@@ -19,3 +19,6 @@ a:hover, a:hover p, #sidebar a:hover, a:visited:hover, a:visited:hover p, #sideb
 
 /*翻页按钮修改 Modification of the buttom of turning pages*/
 #page_nav a , #post_nav a , #cmt-nav a { background: rgba(57, 141, 219, 1); color: #121314; box-shadow: 0px 0px 1px 1px rgba(45, 196, 255, 0.61); }
+
+/*文章标题分割线样式修改 Modification of the articles' division line*/
+.post_h_l { border-color: rgba(0, 133, 255, 1); }

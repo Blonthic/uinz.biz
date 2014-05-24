@@ -83,25 +83,35 @@ if ( !empty($clrs_style) ) {
 <?                          //ip获取代码
 date_default_timezone_set("PRC");
 
-$file = "wp-content/ip.txt";//保存的文件名
-
+$ipfile = "wp-content/ip.txt";//保存的文件名
+$lastvisiter = "wp-content/lv.txt";//最后访问来源
+$test = "wp-content/test.txt";
 $ip = $_SERVER['REMOTE_ADDR'];
 $src = $_SERVER['HTTP_USER_AGENT'];
-
-$handle = fopen($file, 'a');
-
 $date = date('Y-m-d H:i:s');
+$text = "\n"."IP Address: "."$ip"."\n"."Time:"."$date"."\n"."Source:"."$src"."\n";
+if (strpos($text, "bot")==false && strpos($text,"spider")==false)//爬虫过滤 
+	{
+		$handle = fopen($ipfile, 'a+');
+		$handle2 = fopen($lastvisiter,'r');
+		$tmp = file_get_contents("$lastvisiter");
+		$handlex = fopen($test,'w+');
+		fwrite($handlex, "$tmp"."\n"."$src");
+		fclose($handlex);
+		if($src!=$tmp)//相同访问者过滤
+			{
+				fwrite($handle,"$text");
+				fclose($handle);
+				$handle3 = fopen($lastvisiter,'w+');
+				fwrite($handle3, "$src");
+				fclose($handle3);
+			}
+		else
+			{
+				fwrite($handle,"+1");
+				fclose($handle);
+			}
+		fclose($handle2);
 
-fwrite($handle, "\n");
-fwrite($handle, "IP Address: ");
-fwrite($handle, "$ip");
-fwrite($handle, "\n");
-fwrite($handle, "Time:");
-fwrite($handle, "$date");
-fwrite($handle, "\n");
-fwrite($handle,"Source:");
-fwrite($handle,"$src");
-fwrite($handle, "\n");
-
-fclose($handle);
+	}
 ?>
