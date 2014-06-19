@@ -18,8 +18,7 @@ pre,code { margin: 15px 0; padding: 10px; display: block;
 	border-style: solid; border-width: 1px; border-color: #DDD; 0 0 0 5px rgba(170, 210, 241, 0.4);}
 #ctn,#link { background: rgba(0, 173, 255, 0.14); margin: -16px 20px 0 200px; box-shadow:0 0 20px rgba(55, 174, 253, 0.88); }
 /*文章发布时间样式修改 Modification of the post time block behind the article*/
-.post_time { display: block; color: black; float: right; padding: 10px; margin: 10px;text-align: center; font-family:   "Consolas","Times New Roman", serif, sans-serif;border-width: 0;  background-color: rgba(255, 255, 255, 0.76);}
-
+.post_time { display: block; color: black; float: right; padding: 8px; margin: 0px; height: 63px; text-align: center; font-family:   "Consolas","Times New Roman", serif, sans-serif;border-width: 0;  background-color: rgba(255, 255, 255, 0.76);}
 
 /*hr样式修改 Making my own "hr" style*/
 .hrs{ height:2px;border:none;border-top:2px solid;width: 90%;}
@@ -85,3 +84,6 @@ src: url('/wp-content/themes/clearision-child/Wenquanyi_Micro_Hei.ttf')
 }
 */
 html,button,input,select,textarea {font-family: "Wenquanyi Micro Hei", "WenQuanYi Micro Hei Mono", "Segeo UI Mono", "Hiragino Sans GB", "Microsoft YaHei", "Droid Sans Fallback", "WenQuanYi Zen Hei", "WenQuanYi Zen Hei", "Apple LiGothic Medium", "SimHei", "ST Heiti", "WenQuanYi Zen Hei Sharp", Sans; color:#222;}
+
+/*readmore按钮样式修改 readmore button's modification*/
+.more-link { display: inline-block; padding: 0 5px; line-height: 22px; height: 22px; color: white; width: 100%; text-align: center;}

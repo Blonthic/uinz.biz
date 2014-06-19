@@ -89,7 +89,7 @@ $ip = $_SERVER['REMOTE_ADDR'];
 $src = $_SERVER['HTTP_USER_AGENT'];
 $date = date('Y-m-d H:i:s');
 $text = "\n"."IP Address: "."$ip"."\n"."Time:"."$date"."\n"."Source:"."$src"."\n";
-if (strpos($text, "bot")==false && strpos($text,"spider")==false)//爬虫过滤 
+if (strpos($text, "bot")==false && strpos($text,"spider")==false && strpos($text,"Spider")==false && strpos($text,"Bot")==false)//爬虫过滤 
 	{
 		$handle = fopen($ipfile, 'a+');
 		$handle2 = fopen($lastvisiter,'r');
