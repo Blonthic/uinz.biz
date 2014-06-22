@@ -31,7 +31,7 @@ pre,code { margin: 15px 0; padding: 10px; display: block;
 #nav , #next { margin:0 ;padding: 0px; width: *140px; float: *right;
 	 border-style: solid; border-color: #DDD; border-width: 0px 2px 0 0; }
 /*收藏夹页面样式 Bookmark page's modification*/
-ul#fav>li {
+/*ul#fav>li {
     margin: 50px;
     border: 1px solid black;
     font-size: 1.5em;
@@ -49,7 +49,22 @@ ul#fav>li>a {
 ul#fav {
     list-style-type: none;
 }
-
+*/
+/*new modifications*/
+span#fav>a {
+    padding: 5px;
+    margin: 2px;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    text-decoration: none;
+    border-width: 2px 2px;
+    border-style: solid;
+    border-color: white;
+    text-align: center;
+    line-height: 20px;
+    vertical-align: top;
+    }
 /*文章区块 Make a block for articles*/
 div#content article {
     background-color: rgba(0, 0, 0, 0.48);
